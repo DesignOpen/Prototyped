@@ -5,35 +5,37 @@ body
   padding 0
   margin 0
 #site
-  display -webkit-flex
-  display flex
-  -webkit-flex-flow row
-  flex-flow row
   height 100%
-  overflow hidden
 #article
   display block
-  max-width 500px
+  max-width calc(40% + 500px)
+  width 100%
   min-height 100%
   box-sizing border-box
-  padding 30px
-  overflow scroll
+  padding 30px 0 0 calc(40%+30px)
   height 100%
 #image
   width 40%
   background-image url('http://opensourcedesign.is/img/haymarket-metro-station-escalator-shaft.jpg')
   background-repeat none
   background-size cover
+  height 100%
+  position fixed
 h1,h2
   font-family 'league_gothic', sans-serif
   text-transform uppercase
   font-weight normal
   padding 0
+  background-image url('../img/dark_leather.jpg')
+  -webkit-background-clip text
+  background-clip text
+  color rgba(0,0,0,0)
+  opacity 0.85
 h1
   font-size 102px
   line-height 90px
   font-style italic
-  margin-top 30px
+  margin-top 0
   margin-bottom 50px
 h2
   font-size 72px
