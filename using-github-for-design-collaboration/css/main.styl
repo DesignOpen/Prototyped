@@ -1,9 +1,16 @@
+var-background = hsl(0,0%,94%)
 html,body
   height 100%
 body
   font-family source-sans-pro, sans-serif
   padding 0
   margin 0
+  background var-background
+a
+  color blue
+  text-decoration none
+  &:hover
+    background hsla(60,100%,50%,0.4)
 #site
   height 100%
 #image
@@ -11,6 +18,7 @@ body
   background-repeat none
   background-size cover
 #article
+  -moz-box-sizing border-box
   box-sizing border-box
 @media screen and (max-width: 700px)
   #image
@@ -40,16 +48,17 @@ body
     font-weight normal
     padding 0
     background-image url('../img/dark_leather.jpg')
+    background-size 360px 360px
     -webkit-background-clip text
     background-clip text
-    color rgba(0,0,0,0)
+    -webkit-text-fill-color transparent
     opacity 0.85
   h1
     font-size 96px
     line-height 78px
     font-style italic
     margin-top 0
-    margin-bottom 50px
+    margin-bottom 40px
     padding-top 1px
   h2
     font-size 72px
@@ -59,17 +68,26 @@ body
     display inline-block
     background #000
     color #FFF
-    padding-left 30px
+    padding 3px 32px 0 30px
     position relative
     left -30px
+    height 26px
+    -moz-box-sizing border-box
+    box-sizing border-box
+    margin-bottom 10px
+    background-image url('../img/dark_leather.jpg')
+    background-size 360px 360px
+    opacity 0.85
     &:after
       position absolute
       content ''
       top 0
-      right -20px
-      width 20px
-      height 100%
-      background blue
+      right 0
+      width 0
+      height 0
+      border-style solid
+      border-width 13px 22.5px 13px 0;
+      border-color transparent var-background transparent transparent;
 @media screen and (min-width: 820px)
   #article
     max-width calc(40% + 500px)

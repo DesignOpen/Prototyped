@@ -6,6 +6,14 @@ body {
   font-family: source-sans-pro, sans-serif;
   padding: 0;
   margin: 0;
+  background: #f0f0f0;
+}
+a {
+  color: #00f;
+  text-decoration: none;
+}
+a:hover {
+  background: rgba(255,255,0,0.4);
 }
 #site {
   height: 100%;
@@ -16,6 +24,7 @@ body {
   background-size: cover;
 }
 #article {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media screen and (max-width: 700px) {
@@ -52,9 +61,10 @@ body {
     font-weight: normal;
     padding: 0;
     background-image: url("../img/dark_leather.jpg");
+    background-size: 360px 360px;
     -webkit-background-clip: text;
     background-clip: text;
-    color: rgba(0,0,0,0);
+    -webkit-text-fill-color: transparent;
     opacity: 0.85;
   }
   h1 {
@@ -62,7 +72,7 @@ body {
     line-height: 78px;
     font-style: italic;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding-top: 1px;
   }
   h2 {
@@ -74,18 +84,27 @@ body {
     display: inline-block;
     background: #000;
     color: #fff;
-    padding-left: 30px;
+    padding: 3px 32px 0 30px;
     position: relative;
     left: -30px;
+    height: 26px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-image: url("../img/dark_leather.jpg");
+    background-size: 360px 360px;
+    opacity: 0.85;
   }
   .publishDate:after {
     position: absolute;
     content: '';
     top: 0;
-    right: -20px;
-    width: 20px;
-    height: 100%;
-    background: #00f;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 22.5px 13px 0;
+    border-color: transparent #f0f0f0 transparent transparent;
   }
 }
 @media screen and (min-width: 820px) {
