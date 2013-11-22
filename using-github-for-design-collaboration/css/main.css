@@ -8,6 +8,7 @@ body {
   margin: 0;
   background: #f0f0f0;
   color: #000;
+  padding-top: 36px;
 }
 a {
   color: #00f;
@@ -36,6 +37,15 @@ h2 {
 }
 h1 {
   font-style: italic;
+}
+#author {
+  background-image: url("../img/dark_leather.jpg");
+  background-size: 360px 360px;
+  width: 100%;
+}
+#author img {
+  border-radius: 40px;
+  box-shadow: 0 0 0 5px #fff;
 }
 @media screen and (max-width: 700px) {
   #image {
