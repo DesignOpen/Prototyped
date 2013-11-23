@@ -1,3 +1,21 @@
+#sitebar {
+  background: #000;
+  padding-top: 5px;
+  height: 36px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+#sitebar a:hover {
+  background: transparent;
+}
+#sitebar a:hover path {
+  fill: #f5f58f;
+}
 html,
 body {
   height: 100%;
@@ -8,13 +26,14 @@ body {
   margin: 0;
   background: #f0f0f0;
   color: #000;
+  padding-top: 36px;
 }
 a {
-  color: #00f;
+  color: #4a87ff;
   text-decoration: none;
 }
 a:hover {
-  background: rgba(255,255,0,0.4);
+  background: #f5f58f;
 }
 #site {
   height: 100%;
@@ -36,6 +55,36 @@ h2 {
 }
 h1 {
   font-style: italic;
+}
+#author {
+  margin: 60px 0;
+}
+#author section {
+  -moz-box-sizing: border-box;
+  border-box: box-sizing;
+  padding: 0 0 0 95px;
+  position: relative;
+}
+#author h3 {
+  margin: 15px 0 2px 0;
+}
+#author p {
+  margin-top: 0;
+}
+#avatar {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#avatar a:hover {
+  background: transparent;
+}
+#avatar a:hover img {
+  box-shadow: 0 0 0 5px #f5f58f;
+}
+#avatar img {
+  border-radius: 40px;
+  box-shadow: 0 0 0 5px #fff;
 }
 @media screen and (max-width: 700px) {
   #image {
@@ -69,13 +118,14 @@ h1 {
   h2 {
     font-size: 40px;
   }
-  .publishDate {
+  #publishDate,
+  #author header {
     border-bottom: 1px solid #000;
   }
 }
 @media screen and (max-width: 420px) {
   #image {
-    padding-bottom: 100%;
+    padding-bottom: 80%;
   }
   h1 {
     font-size: 58px;
@@ -125,13 +175,15 @@ h1 {
     line-height: 72px;
     margin-bottom: 30px;
   }
-  .publishDate {
+  #publishDate,
+  #author header {
     display: inline-block;
     background: #000;
     color: #fff;
     padding: 3px 32px 0 30px;
     position: relative;
     left: -30px;
+    top: 0;
     height: 26px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -140,7 +192,8 @@ h1 {
     background-size: 360px 360px;
     opacity: 0.85;
   }
-  .publishDate:after {
+  #publishDate:after,
+  #author header:after {
     position: absolute;
     content: '';
     top: 0;

@@ -1,5 +1,24 @@
 var-background = hsl(0,0%,94%)
 var-color = hsl(0,0%,0%)
+var-highlight-bg = #F5F58F
+var-link-color = #4A87FF
+
+#sitebar
+  background #000
+  padding-top 5px
+  height 36px
+  text-align center
+  -moz-box-sizing border-box
+  box-sizing border-box
+  position fixed
+  width 100%
+  top 0
+  z-index 10
+  a:hover
+    background transparent
+    path
+      fill var-highlight-bg
+
 html,body
   height 100%
 body
@@ -8,11 +27,12 @@ body
   margin 0
   background var-background
   color var-color
+  padding-top 36px
 a
-  color blue
+  color var-link-color
   text-decoration none
   &:hover
-    background hsla(60,100%,50%,0.4)
+    background var-highlight-bg
 #site
   height 100%
 #image
@@ -28,6 +48,28 @@ h1,h2
   font-weight normal
 h1
   font-style italic
+#author
+  margin 60px 0
+  section
+    -moz-box-sizing border-box
+    border-box box-sizing
+    padding 0 0 0 95px
+    position relative
+  h3
+    margin 15px 0 2px 0
+  p
+    margin-top 0
+#avatar
+  position absolute
+  left 0
+  top 0
+  a:hover
+    background transparent
+    img
+      box-shadow 0 0 0 5px var-highlight-bg
+  img
+    border-radius 40px
+    box-shadow 0 0 0 5px #FFF
 @media screen and (max-width: 700px)
   #image
     width 100%
@@ -55,11 +97,11 @@ h1
     text-shadow 2px 4px 0 #000
   h2
     font-size 40px
-  .publishDate
+  #publishDate, #author header
     border-bottom 1px solid var-color
 @media screen and (max-width: 420px)
   #image
-    padding-bottom 100%
+    padding-bottom 80%
   h1
     font-size 58px
     line-height 53px
@@ -99,13 +141,14 @@ h1
     font-size 72px
     line-height 72px
     margin-bottom 30px
-  .publishDate
+  #publishDate, #author header
     display inline-block
     background #000
     color #FFF
     padding 3px 32px 0 30px
     position relative
     left -30px
+    top 0
     height 26px
     -moz-box-sizing border-box
     box-sizing border-box
