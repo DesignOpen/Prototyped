@@ -8,7 +8,7 @@
     <style>
       #sitebar{-moz-box-sizing:border-box;background:#000;box-sizing:border-box;height:36px;padding-top:5px;position:fixed;text-align:center;top:0;width:100%;z-index:10}#sitebar a:hover path{fill:#f5f58f}body{background:#f0f0f0;color:#000;font-family:source-sans-pro, sans-serif;margin:0;padding:36px 0 0}a{color:#4a87ff;text-decoration:none}a:hover{background:#f5f58f}#image{background-image:url(http://opensourcedesign.is/img/haymarket-metro-station-escalator-shaft.jpg);background-repeat:none;background-size:cover}#article{-moz-box-sizing:border-box;box-sizing:border-box}h1,h2{font-family:league_gothic, sans-serif;font-weight:400;text-transform:uppercase}h1{font-style:italic}#author{margin:60px 0}#author section{-moz-box-sizing:border-box;border-box:box-sizing;padding:0 0 0 95px;position:relative}#author h3{margin:15px 0 2px}#author p{margin-top:0}#avatar{left:0;position:absolute;top:0}#avatar a:hover img{box-shadow:0 0 0 5px #f5f58f}#avatar img{border-radius:40px;box-shadow:0 0 0 5px #fff}#sitebar a:hover,#avatar a:hover{background:transparent}html,body,#site{height:100%}
       @media screen and (max-width: 700px) {
-        #image{height:0;padding-bottom:62%;position:relative;width:100%}#image:after{background:rgba(0,0,0,0.25);content:'';height:100%;left:0;position:absolute;top:0;width:100%}#article{margin:-290px auto 0;max-width:500px;padding:0 20px 30px;position:relative}h1{color:#f0f0f0;font-size:80px;line-height:72px;max-width:390px;text-shadow:2px 4px 0 #000}h2{font-size:40px}#publishDate,#author header{border-bottom:1px solid #000}
+        #image{height:0;padding-bottom:62%;position:relative;width:100%}#image:after{background:rgba(0,0,0,0.25);content:'';height:100%;left:0;position:absolute;top:0;width:100%}#article{margin:-290px auto 0;max-width:500px;padding:0 20px 30px;position:relative}h1{color:#f0f0f0;font-size:80px;line-height:72px;max-width:390px;text-shadow:2px 4px 0 #000}h2{font-size:40px}#publishDate,#author header{border-bottom:1px solid #000;font-weight:300}#author header{font-weight: 600}
       }
       @media screen and (max-width: 420px) {
         #image{padding-bottom:80%}h1{font-size:58px;line-height:53px;max-width:286px}#article{margin:-230px auto 0}
@@ -91,7 +91,7 @@
     // Add a script element as a child of the body
     function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "//use.edgefonts.net/source-sans-pro.js";
+      element.src = "//use.edgefonts.net/source-sans-pro:n3,n4,n6.js";
       document.body.appendChild(element);
     }
     // Check for browser support of event handling capability
