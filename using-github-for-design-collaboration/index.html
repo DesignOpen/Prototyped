@@ -6,19 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Using GitHub for Design Collaboration | Open Source Design</title>
     <style>
-      #sitebar{-moz-box-sizing:border-box;background:#000;box-sizing:border-box;height:36px;padding-top:5px;position:fixed;text-align:center;top:0;width:100%;z-index:10}#sitebar a:hover path{fill:#f5f58f}body{background:#f0f0f0;color:#000;font-family:source-sans-pro, sans-serif;margin:0;padding:36px 0 0}a{color:#4a87ff;text-decoration:none}a:hover{background:#f5f58f}#image{background-image:url(http://opensourcedesign.is/img/haymarket-metro-station-escalator-shaft.jpg);background-repeat:none;background-size:cover}#article{-moz-box-sizing:border-box;box-sizing:border-box}h1,h2{font-family:league_gothic, sans-serif;font-weight:400;text-transform:uppercase}h1{font-style:italic}#author{margin:60px 0}#author section{-moz-box-sizing:border-box;border-box:box-sizing;padding:0 0 0 95px;position:relative}#author h3{margin:15px 0 2px}#author p{margin-top:0}#avatar{left:0;position:absolute;top:0}#avatar a:hover img{box-shadow:0 0 0 5px #f5f58f}#avatar img{border-radius:40px;box-shadow:0 0 0 5px #fff}#sitebar a:hover,#avatar a:hover{background:transparent}html,body,#site{height:100%}
-      @media screen and (max-width: 700px) {
-        #image{height:0;padding-bottom:62%;position:relative;width:100%}#image:after{background:rgba(0,0,0,0.25);content:'';height:100%;left:0;position:absolute;top:0;width:100%}#article{margin:-290px auto 0;max-width:500px;padding:0 20px 30px;position:relative}h1{color:#f0f0f0;font-size:80px;line-height:72px;max-width:390px;text-shadow:2px 4px 0 #000}h2{font-size:40px}#publishDate,#author header{border-bottom:1px solid #000;font-weight:300}#author header{font-weight: 600}
-      }
-      @media screen and (max-width: 420px) {
-        #image{padding-bottom:80%}h1{font-size:58px;line-height:53px;max-width:286px}#article{margin:-230px auto 0}
-      }
-      @media screen and (min-width: 700px) {
-        #article{display:block;height:100%;max-width:calc(30% + 500px);min-height:100%;padding:30px 30px 0 calc(30% + 30px);width:100%}#image{background-position:top center;height:100%;position:fixed;width:30%}h1,h2{padding: 0;opacity: 0.85;color: #1a1a1a;-webkit-text-fill-color: transparent;background: -webkit-linear-gradient(transparent, transparent), url("img/dark_leather.jpg") repeat;background: -o-linear-gradient(transparent, transparent);-webkit-background-clip: text;background-clip: text;background-size: 360px 360px;}h1{font-size:96px;line-height:82px;margin-bottom:50px;margin-top:0;padding-top:1px}h2{font-size:72px;line-height:72px;margin-bottom:30px}#publishDate,#author header{-moz-box-sizing:border-box;background:#000;background-image:url(img/dark_leather.jpg);background-size:360px 360px;box-sizing:border-box;color:#fff;display:inline-block;height:26px;left:-30px;margin-bottom:10px;opacity:0.85;padding:3px 32px 0 30px;position:relative;top:0}#publishDate:after,#author header:after{border-color:transparent #f0f0f0 transparent transparent;border-style:solid;border-width:13px 22.5px 13px 0;content:'';height:0;position:absolute;right:0;top:0;width:0}
-      }
-      @media screen and (min-width: 820px) {
-        #article{max-width:calc(40% + 500px);padding:30px 30px 0 calc(40% + 30px)}#image{background-position:top left;width:40%}
-      }
+      #sitebar{background:#000;padding-top:5px;height:36px;text-align:center;-moz-box-sizing:border-box;box-sizing:border-box;position:fixed;width:100%;top:0;z-index:10;}
+#sitebar a:hover{background:transparent;}
+#sitebar a:hover path{fill:#f5f58f}
+html,body{height:100%}
+body{font-family:source-sans-pro,sans-serif;padding:0;margin:0;background:#f0f0f0;color:#000;padding-top:36px}
+a{color:#4a87ff;text-decoration:none;}
+a:hover{background:#f5f58f}
+#site{height:100%}
+#image{background-image:url("http://opensourcedesign.is/img/haymarket-metro-station-escalator-shaft.jpg");background-repeat:none;background-size:cover}
+#article{-moz-box-sizing:border-box;box-sizing:border-box}
+h1,h2{font-family:'league_gothic',sans-serif;text-transform:uppercase;font-weight:normal}
+h1{font-style:italic}
+#author{margin:60px 0;}
+#author section{-moz-box-sizing:border-box;border-box:box-sizing;padding:0 0 0 95px;position:relative}
+#author h3{margin:15px 0 2px 0}
+#author p{margin-top:0}
+#avatar{position:absolute;left:0;top:0;}
+#avatar a:hover{background:transparent;}
+#avatar a:hover img{box-shadow:0 0 0 5px #f5f58f}
+#avatar img{border-radius:40px;box-shadow:0 0 0 5px #fff}
+@media screen and (max-width: 700px){#image{width:100%;height:0;padding-bottom:62%;position:relative;}
+#image:after{content:'';position:absolute;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.25)}
+#article{max-width:500px;position:relative;margin:-290px auto 0;padding:0 20px 30px 20px}
+h1{font-size:80px;line-height:72px;max-width:390px;color:#f0f0f0;text-shadow:2px 4px 0 #000}
+h2{font-size:40px}
+#publishDate,#author header{border-bottom:1px solid #000;font-weight:700}
+}@media screen and (max-width: 420px){#image{padding-bottom:80%}
+h1{font-size:58px;line-height:53px;max-width:286px}
+#article{margin:-230px auto 0}
+}@media screen and (min-width: 700px){#article{display:block;max-width:calc(30% + 500px);width:100%;min-height:100%;padding:30px 30px 0 calc(30% + 30px);height:100%}
+#image{width:30%;height:100%;position:fixed;background-position:top center}
+h1,h2{padding:0;opacity:.85;color:#1a1a1a;-webkit-text-fill-color:transparent;background:-webkit-linear-gradient(transparent,transparent),url("../img/dark_leather.jpg") repeat;background:-o-linear-gradient(transparent,transparent);-webkit-background-clip:text;background-clip:text;background-size:360px 360px}
+h1{font-size:96px;line-height:82px;margin-top:0;margin-bottom:50px;padding-top:1px}
+h2{font-size:72px;line-height:72px;margin-bottom:30px}
+#publishDate,#author header{display:inline-block;background:#000;color:#fff;padding:3px 32px 0 30px;position:relative;left:-30px;top:0;height:26px;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:10px;background-image:url("../img/dark_leather.jpg");background-size:360px 360px;opacity:.85;}
+#publishDate:after,#author header:after{position:absolute;content:'';top:0;right:0;width:0;height:0;border-style:solid;border-width:13px 22.5px 13px 0;border-color:transparent #f0f0f0 transparent transparent}
+#publishDate{position:relative;top:-30px}
+}@media screen and (min-width: 820px){#article{max-width:calc(40% + 500px);padding:30px 30px 0 calc(40% + 30px)}
+#image{width:40%;background-position:top left}
+}
       @font-face{font-family:'league_gothic_condensed';src:url('css/fonts/leaguegothic-condenseditalic-webfont.eot');src:url('css/fonts/leaguegothic-condenseditalic-webfont.eot?#iefix') format('embedded-opentype'),url('css/fonts/leaguegothic-condenseditalic-webfont.woff') format('woff'),url('css/fonts/leaguegothic-condenseditalic-webfont.ttf') format('truetype'),url('css/fonts/leaguegothic-condenseditalic-webfont.svg#league_gothiccondensed_italic') format('svg');font-weight:normal;font-style:italic}@font-face{font-family:'league_gothic_condensed';src:url('css/fonts/leaguegothic-condensedregular-webfont.eot');src:url('css/fonts/leaguegothic-condensedregular-webfont.eot?#iefix') format('embedded-opentype'),url('css/fonts/leaguegothic-condensedregular-webfont.woff') format('woff'),url('css/fonts/leaguegothic-condensedregular-webfont.ttf') format('truetype'),url('css/fonts/leaguegothic-condensedregular-webfont.svg#league_gothicCnRg') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'league_gothic';src:url('css/fonts/leaguegothic-italic-webfont.eot');src:url('css/fonts/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),url('css/fonts/leaguegothic-italic-webfont.woff') format('woff'),url('css/fonts/leaguegothic-italic-webfont.ttf') format('truetype'),url('css/fonts/leaguegothic-italic-webfont.svg#league_gothicitalic') format('svg');font-weight:normal;font-style:italic}@font-face{font-family:'league_gothic';src:url('css/fonts/leaguegothic-regular-webfont.eot');src:url('css/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),url('css/fonts/leaguegothic-regular-webfont.woff') format('woff'),url('css/fonts/leaguegothic-regular-webfont.ttf') format('truetype'),url('css/fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');font-weight:normal;font-style:normal}
     </style>
     <!--[if lt IE 9]>

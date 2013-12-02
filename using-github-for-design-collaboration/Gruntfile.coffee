@@ -13,13 +13,14 @@ module.exports = (grunt) ->
     stylus:
       compile:
         options:
-          compress: false
+          compress: true
         files:
           'css/main.css': 'css/main.styl'
-          'css/reset.css': 'css/reset.styl'
     jade:
       options:
         pretty: true
+        data:
+          mincss: grunt.file.read('css/main.css')
       compile:
         files:
           'index.html': 'index.jade'
@@ -37,7 +38,7 @@ module.exports = (grunt) ->
     regarde:
       stylus:
         files: ['css/*.styl']
-        tasks: ['stylus', 'livereload']
+        tasks: ['stylus', 'jade', 'livereload']
       jade:
         files: ['*.jade']
         tasks: ['jade', 'livereload']

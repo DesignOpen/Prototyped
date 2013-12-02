@@ -1,218 +1,40 @@
-#sitebar {
-  background: #000;
-  padding-top: 5px;
-  height: 36px;
-  text-align: center;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-}
-#sitebar a:hover {
-  background: transparent;
-}
-#sitebar a:hover path {
-  fill: #f5f58f;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  font-family: source-sans-pro, sans-serif;
-  padding: 0;
-  margin: 0;
-  background: #f0f0f0;
-  color: #000;
-  padding-top: 36px;
-}
-a {
-  color: #4a87ff;
-  text-decoration: none;
-}
-a:hover {
-  background: #f5f58f;
-}
-#site {
-  height: 100%;
-}
-#image {
-  background-image: url("http://opensourcedesign.is/img/haymarket-metro-station-escalator-shaft.jpg");
-  background-repeat: none;
-  background-size: cover;
-}
-#article {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-h1,
-h2 {
-  font-family: 'league_gothic', sans-serif;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-h1 {
-  font-style: italic;
-}
-#author {
-  margin: 60px 0;
-}
-#author section {
-  -moz-box-sizing: border-box;
-  border-box: box-sizing;
-  padding: 0 0 0 95px;
-  position: relative;
-}
-#author h3 {
-  margin: 15px 0 2px 0;
-}
-#author p {
-  margin-top: 0;
-}
-#avatar {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-#avatar a:hover {
-  background: transparent;
-}
-#avatar a:hover img {
-  box-shadow: 0 0 0 5px #f5f58f;
-}
-#avatar img {
-  border-radius: 40px;
-  box-shadow: 0 0 0 5px #fff;
-}
-@media screen and (max-width: 700px) {
-  #image {
-    width: 100%;
-    height: 0;
-    padding-bottom: 62%;
-    position: relative;
-  }
-  #image:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.25);
-  }
-  #article {
-    max-width: 500px;
-    position: relative;
-    margin: -290px auto 0;
-    padding: 0 20px 30px 20px;
-  }
-  h1 {
-    font-size: 80px;
-    line-height: 72px;
-    max-width: 390px;
-    color: #f0f0f0;
-    text-shadow: 2px 4px 0 #000;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  #publishDate,
-  #author header {
-    border-bottom: 1px solid #000;
-    font-weight: 700;
-  }
-}
-@media screen and (max-width: 420px) {
-  #image {
-    padding-bottom: 80%;
-  }
-  h1 {
-    font-size: 58px;
-    line-height: 53px;
-    max-width: 286px;
-  }
-  #article {
-    margin: -230px auto 0;
-  }
-}
-@media screen and (min-width: 700px) {
-  #article {
-    display: block;
-    max-width: calc(30% + 500px);
-    width: 100%;
-    min-height: 100%;
-    padding: 30px 30px 0 calc(30% + 30px);
-    height: 100%;
-  }
-  #image {
-    width: 30%;
-    height: 100%;
-    position: fixed;
-    background-position: top center;
-  }
-  h1,
-  h2 {
-    padding: 0;
-    opacity: 0.85;
-    color: #1a1a1a;
-    -webkit-text-fill-color: transparent;
-    background: -webkit-linear-gradient(transparent, transparent), url("../img/dark_leather.jpg") repeat;
-    background: -o-linear-gradient(transparent, transparent);
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-size: 360px 360px;
-  }
-  h1 {
-    font-size: 96px;
-    line-height: 82px;
-    margin-top: 0;
-    margin-bottom: 50px;
-    padding-top: 1px;
-  }
-  h2 {
-    font-size: 72px;
-    line-height: 72px;
-    margin-bottom: 30px;
-  }
-  #publishDate,
-  #author header {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 3px 32px 0 30px;
-    position: relative;
-    left: -30px;
-    top: 0;
-    height: 26px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    background-image: url("../img/dark_leather.jpg");
-    background-size: 360px 360px;
-    opacity: 0.85;
-  }
-  #publishDate:after,
-  #author header:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 13px 22.5px 13px 0;
-    border-color: transparent #f0f0f0 transparent transparent;
-  }
-}
-@media screen and (min-width: 820px) {
-  #article {
-    max-width: calc(40% + 500px);
-    padding: 30px 30px 0 calc(40% + 30px);
-  }
-  #image {
-    width: 40%;
-    background-position: top left;
-  }
+#sitebar{background:#000;padding-top:5px;height:36px;text-align:center;-moz-box-sizing:border-box;box-sizing:border-box;position:fixed;width:100%;top:0;z-index:10;}
+#sitebar a:hover{background:transparent;}
+#sitebar a:hover path{fill:#f5f58f}
+html,body{height:100%}
+body{font-family:source-sans-pro,sans-serif;padding:0;margin:0;background:#f0f0f0;color:#000;padding-top:36px}
+a{color:#4a87ff;text-decoration:none;}
+a:hover{background:#f5f58f}
+#site{height:100%}
+#image{background-image:url("http://opensourcedesign.is/img/haymarket-metro-station-escalator-shaft.jpg");background-repeat:none;background-size:cover}
+#article{-moz-box-sizing:border-box;box-sizing:border-box}
+h1,h2{font-family:'league_gothic',sans-serif;text-transform:uppercase;font-weight:normal}
+h1{font-style:italic}
+#author{margin:60px 0;}
+#author section{-moz-box-sizing:border-box;border-box:box-sizing;padding:0 0 0 95px;position:relative}
+#author h3{margin:15px 0 2px 0}
+#author p{margin-top:0}
+#avatar{position:absolute;left:0;top:0;}
+#avatar a:hover{background:transparent;}
+#avatar a:hover img{box-shadow:0 0 0 5px #f5f58f}
+#avatar img{border-radius:40px;box-shadow:0 0 0 5px #fff}
+@media screen and (max-width: 700px){#image{width:100%;height:0;padding-bottom:62%;position:relative;}
+#image:after{content:'';position:absolute;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.25)}
+#article{max-width:500px;position:relative;margin:-290px auto 0;padding:0 20px 30px 20px}
+h1{font-size:80px;line-height:72px;max-width:390px;color:#f0f0f0;text-shadow:2px 4px 0 #000}
+h2{font-size:40px}
+#publishDate,#author header{border-bottom:1px solid #000;font-weight:700}
+}@media screen and (max-width: 420px){#image{padding-bottom:80%}
+h1{font-size:58px;line-height:53px;max-width:286px}
+#article{margin:-230px auto 0}
+}@media screen and (min-width: 700px){#article{display:block;max-width:calc(30% + 500px);width:100%;min-height:100%;padding:30px 30px 0 calc(30% + 30px);height:100%}
+#image{width:30%;height:100%;position:fixed;background-position:top center}
+h1,h2{padding:0;opacity:.85;color:#1a1a1a;-webkit-text-fill-color:transparent;background:-webkit-linear-gradient(transparent,transparent),url("../img/dark_leather.jpg") repeat;background:-o-linear-gradient(transparent,transparent);-webkit-background-clip:text;background-clip:text;background-size:360px 360px}
+h1{font-size:96px;line-height:82px;margin-top:0;margin-bottom:50px;padding-top:1px}
+h2{font-size:72px;line-height:72px;margin-bottom:30px}
+#publishDate,#author header{display:inline-block;background:#000;color:#fff;padding:3px 32px 0 30px;position:relative;left:-30px;top:0;height:26px;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:10px;background-image:url("../img/dark_leather.jpg");background-size:360px 360px;opacity:.85;}
+#publishDate:after,#author header:after{position:absolute;content:'';top:0;right:0;width:0;height:0;border-style:solid;border-width:13px 22.5px 13px 0;border-color:transparent #f0f0f0 transparent transparent}
+#publishDate{position:relative;top:-30px}
+}@media screen and (min-width: 820px){#article{max-width:calc(40% + 500px);padding:30px 30px 0 calc(40% + 30px)}
+#image{width:40%;background-position:top left}
 }
