@@ -29,10 +29,10 @@ h1{font-size:58px;line-height:53px;max-width:286px}
 #article{margin:-230px auto 0}
 }@media screen and (min-width: 700px){#article{display:block;max-width:calc(30% + 500px);width:100%;min-height:100%;padding:30px 30px 0 calc(30% + 30px);height:100%}
 #image{width:30%;height:100%;position:fixed;background-position:top center}
-h1,h2{padding:0;opacity:.85;color:#1a1a1a;-webkit-text-fill-color:transparent;background:-webkit-linear-gradient(transparent,transparent),url("../img/dark_leather.jpg") repeat;background:-o-linear-gradient(transparent,transparent);-webkit-background-clip:text;background-clip:text;background-size:360px 360px}
+h1,h2{padding:0;opacity:.85;color:#1a1a1a;-webkit-text-fill-color:transparent;background:-webkit-linear-gradient(transparent,transparent),url("img/dark_leather.jpg") repeat;background:-o-linear-gradient(transparent,transparent);-webkit-background-clip:text;background-clip:text;background-size:360px 360px}
 h1{font-size:96px;line-height:82px;margin-top:0;margin-bottom:50px;padding-top:1px}
 h2{font-size:72px;line-height:72px;margin-bottom:30px}
-#publishDate,#author header{display:inline-block;background:#000;color:#fff;padding:3px 32px 0 30px;position:relative;left:-30px;top:0;height:26px;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:10px;background-image:url("../img/dark_leather.jpg");background-size:360px 360px;opacity:.85;}
+#publishDate,#author header{display:inline-block;background:#000;color:#fff;padding:3px 32px 0 30px;position:relative;left:-30px;top:0;height:26px;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:10px;background-image:url("img/dark_leather.jpg");background-size:360px 360px;opacity:.85;}
 #publishDate:after,#author header:after{position:absolute;content:'';top:0;right:0;width:0;height:0;border-style:solid;border-width:13px 22.5px 13px 0;border-color:transparent #f0f0f0 transparent transparent}
 #publishDate{position:relative;top:-30px}
 }@media screen and (min-width: 820px){#article{max-width:calc(40% + 500px);padding:30px 30px 0 calc(40% + 30px)}
