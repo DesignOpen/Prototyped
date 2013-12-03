@@ -19,8 +19,6 @@ module.exports = (grunt) ->
     jade:
       options:
         pretty: true
-        data:
-          mincss: grunt.file.read('css/main.css')
       compile:
         files:
           'index.html': 'index.jade'
@@ -38,16 +36,22 @@ module.exports = (grunt) ->
     regarde:
       stylus:
         files: ['css/*.styl']
-        tasks: ['stylus', 'jade', 'livereload']
+        tasks: ['mincss', 'livereload']
       jade:
         files: ['*.jade']
-        tasks: ['jade', 'livereload']
+        tasks: ['mincss', 'livereload']
       coffee:
         files: ['js/*.coffee']
         tasks: ['coffee', 'livereload']
       image:
         files: ['img/*']
         tasks: ['livereload']
+
+  grunt.registerTask 'mincss', 'Compiles Stylus, minifies it, and runs Jade', ()->
+    grunt.task.run('stylus')
+    grunt.config('jade.options.data.mincss', grunt.file.read('css/main.css'))
+    grunt.task.run('jade')
+
 
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-stylus')
@@ -57,5 +61,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-livereload')
 
   # Default task(s).
-  grunt.registerTask('compile', ['coffee','stylus','jade'])
+  grunt.registerTask('compile', ['coffee','mincss'])
   grunt.registerTask('default', ['compile', 'livereload-start', 'connect', 'regarde'])
