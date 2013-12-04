@@ -10,5 +10,8 @@
     "grunt-contrib-connect": "*",
     "grunt-contrib-livereload": "*",
     "coffee-script": "*"
+  },
+  "dependencies": {
+    "stylus": "~0.41.0"
   }
 }

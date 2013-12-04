@@ -48,9 +48,16 @@ module.exports = (grunt) ->
         tasks: ['livereload']
 
   grunt.registerTask 'mincss', 'Compiles Stylus, minifies it, and runs Jade', ()->
-    grunt.task.run('stylus')
-    grunt.config('jade.options.data.mincss', grunt.file.read('css/main.css'))
-    grunt.task.run('jade')
+    done = this.async()
+    stylus = require('stylus')
+    src = grunt.file.read('css/main.styl')
+    output = stylus.render src, {compress: true}, (err, css) ->
+      if (err)
+        grunt.log.error(err)
+      else
+        grunt.config('jade.options.data.mincss', css)
+        grunt.task.run('jade')
+        done()
 
 
   grunt.loadNpmTasks('grunt-contrib-coffee')

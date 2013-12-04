@@ -1,2 +1,26 @@
 html,body
   height 100%
+  padding 0
+  margin 0
+  background black
+#site
+  height 100%
+  width 50%
+  background white
+  position relative
+  left 50%
+  box-sizing border-box
+  padding
+ol#bloglist
+  margin 0
+  padding 0
+  list-style-type none
+  & > li
+    counter-increment item -1
+    position relative
+    &:before
+      content:counter(item)
+      color white
+      text-align right
+      position absolute
+      left -15px
