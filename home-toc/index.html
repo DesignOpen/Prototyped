@@ -5,29 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Open Source Design</title>
-    <style>html,body{height:100%;padding:0;margin:0;background:#000}
-#site{height:100%;width:50%;background:#fff;position:relative;left:50%;box-sizing:border-box;padding}
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic" rel="stylesheet" type="text/css">
+    <link href="css/fonts/chunkfive/stylesheet.css" rel="stylesheet" type="text/css">
+    <style>html,body{min-height:100%}
+body{padding:0;margin:0;background:#f5f5f5;font-family:'Source Sans Pro',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#d92d01;text-decoration:none}
+#site{width:960px;height:100%;position:relative;margin:0 auto;box-sizing:border-box;padding:40px 0 0 190px}
+.stripe{width:100px;height:100%;position:absolute;background:#f5a345;top:0;left:190px}
+.open-source-design-logo{z-index:2;position:relative;background:#f5f5f5;box-sizing:border-box;padding:10px;width:140px;height:140px;border-radius:70px;margin-left:-20px}
 ol#bloglist{margin:0;padding:0;list-style-type:none;}
-ol#bloglist > li{counter-increment:item -1;position:relative;}
-ol#bloglist > li:before{content:counter(item);color:#fff;text-align:right;position:absolute;left:-15px}
+ol#bloglist > li{counter-increment:item -1;position:relative;height:150px;margin-left:140px;}
+ol#bloglist > li:before{content:counter(item);text-align:right;position:absolute;left:-15px;font-family:'chunkfive'}
+ol#bloglist .title{font-weight:300;font-size:36px;letter-spacing:-2px;margin:0}
+ol#bloglist .description{font-weight:300;font-style:italic;font-size:18px;color:#03738e;margin:0}
 </style>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--if lt IE 9script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+    -->
   </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <meta itemscope itemprop="url" content="http://opensourcedesign.is/index.html">
     <meta itemscope itemprop="name" content="Home">
     <div id="site">
+      <div class="stripe"></div>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve" class="open-source-design-logo">
+        <g fill="#1A1A1A">
+          <path d="M60,50.501c-5.246,0-9.499,4.253-9.499,9.499c0,4.572,3.232,8.388,7.535,9.293v50.657C58.689,119.971,59.341,120,60,120s1.311-0.029,1.964-0.05V69.293c4.303-0.905,7.535-4.721,7.535-9.293C69.499,54.754,65.246,50.501,60,50.501z"></path>
+          <path d="M120,60c0-33.137-26.863-60-60-60S0,26.863,0,60c0,31.145,23.732,56.742,54.098,59.708l0,0l0.001-0.011h0c-0.15-24.385-14.849-43.22-20.948-49.993v-0.002c0,0-2.505-3.004-1.086-6.603l11.107-28.171c0,0,2.055-5.207,6.621-5.207H60h10.207c4.565,0,6.621,5.207,6.621,5.207l11.107,28.171c1.419,3.6-1.086,6.603-1.086,6.603v0.002c-6.098,6.772-20.798,25.607-20.948,49.993l0.001,0.011C96.268,116.742,120,91.145,120,60z"></path>
+        </g>
+      </svg>
       <nav itemscope itemtype="http://schema.org/Blog">
-        <ol id="bloglist" style="counter-reset:item 8;">
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/how-to-contribute/" itemprop="url"><span itemprop="name">How To Contribute to a Jekyll Blog on Github</span></a></li>
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/open-design-is-not-design-by-committee/" itemprop="url"><span itemprop="name">Open Design is not Design by Committee</span></a></li>
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/using-github-for-design-collaboration/" itemprop="url"><span itemprop="name">Using GitHub for Design Collaboration</span></a></li>
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/designing-a-brand-in-the-open/" itemprop="url"><span itemprop="name">Designing a Brand in the Open</span></a></li>
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/the-open-source-design-manifesto/" itemprop="url"><span itemprop="name">The Open Source Design Manifesto</span></a></li>
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/how-designers-can-contribute-to-open-source-projects/" itemprop="url"><span itemprop="name">How Designers Can Contribute to Open Source Projects</span></a></li>
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting"><a href="/blogging_about/building_this_site/" itemprop="url"><span itemprop="name">Building this Site</span></a></li>
+        <ol id="bloglist" style="counter-reset:item 9;">
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 itemprop="name" class="title"><a href="/blogging_about/how-to-contribute/" itemprop="url">The Roadmap</a></h2>
+            <h3 itemprop="description" class="description">Where is this project going?</h3>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/how-to-contribute/" itemprop="url"><span itemprop="name">How To Contribute to a Jekyll Blog on Github</span></a></h2>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/open-design-is-not-design-by-committee/" itemprop="url"><span itemprop="name">Open Design is Not Design by Committee</span></a></h2>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/using-github-for-design-collaboration/" itemprop="url"><span itemprop="name">Using GitHub for Design Collaboration</span></a></h2>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/designing-a-brand-in-the-open/" itemprop="url"><span itemprop="name">Designing a Brand in the Open</span></a></h2>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/the-open-source-design-manifesto/" itemprop="url"><span itemprop="name">The Open Source Design Manifesto</span></a></h2>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/how-designers-can-contribute-to-open-source-projects/" itemprop="url"><span itemprop="name">How Designers Can Contribute to Open Source Projects</span></a></h2>
+          </li>
+          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2 class="title"><a href="/blogging_about/building_this_site/" itemprop="url"><span itemprop="name">Building this Site</span></a></h2>
+          </li>
         </ol>
       </nav>
     </div>
