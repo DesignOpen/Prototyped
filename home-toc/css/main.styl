@@ -1,22 +1,41 @@
+background-main = #F5F5F5
+link-color = #D92D01
+
 html,body
-  height 100%
+  min-height 100%
+body
   padding 0
   margin 0
-  font-family helvetica, sans-serif
-body
-  display flex
-  flex-wrap nowrap
-#sidebar
-  min-width 100px
-  background url('img/zwartevilt.png') #000
-  width 40%
-  opacity 0.95
-#content
+  background background-main
+  font-family 'Source Sans Pro', sans-serif
+  -webkit-font-smoothing antialiased
+a
+  color link-color
+  text-decoration none
+#site
+  width 960px
   height 100%
-  width 60%
-  background white
+  position relative
+  margin 0 auto
   box-sizing border-box
-  min-width 500px
+  padding 40px 0 0 190px
+.stripe
+  width 100px
+  height 100%
+  position absolute
+  background #F5A345
+  top 0
+  left 190px
+.open-source-design-logo
+  z-index 2
+  position relative
+  background background-main
+  box-sizing border-box
+  padding 10px
+  width 140px
+  height 140px
+  border-radius 70px
+  margin-left -20px
 ol#bloglist
   margin 0
   padding 0
@@ -24,16 +43,22 @@ ol#bloglist
   & > li
     counter-increment item -1
     position relative
-    height 120px
+    height 150px
+    margin-left 140px
     &:before
       content:counter(item)
-      color black
-      text-align center
+      text-align right
       position absolute
-      left -115px
-      background white
-      width 100px
-      height 100px
-      border-radius 50px
-      vertical-align middle
-      display block
+      left -15px
+      font-family 'chunkfive'
+  .title
+    font-weight 300
+    font-size 36px
+    letter-spacing -2px
+    margin 0
+  .description
+    font-weight 400
+    font-style italic
+    font-size 18px
+    color #03738E
+    margin 0
