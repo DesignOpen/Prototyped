@@ -1,0 +1,92 @@
+@import 'fonts/opensans/stylesheet'
+$primary-color: #3D3D3D
+$cta-color: #4183C4
+
+html
+  height: 100%
+
+body
+  display: flex
+  font-family: 'open_sans'
+  color: $primary-color
+  height: 100%
+  -webkit-font-smoothing: antialiased
+  font-size: 16px
+  font-weight: 200
+header.site
+  order: 2
+  flex-shrink: 0
+  width: 300px
+  background: #F2F2F2
+  border-left: 1px solid #E6E6E6
+  box-sizing: border-box
+  padding: 40px 25px 0
+  position: relative
+  .description
+    padding: 27px 12px 0
+    font-size: 20px
+    font-weight: 200
+    line-height: 24px
+  h1
+    text-transform: uppercase
+    text-align: center
+    span
+      display: inline-block
+      width: 250px
+      overflow: hidden
+      &:first-child
+        font-size: 36px
+        font-weight: 900
+      &:last-child
+        font-size: 30px
+        font-weight: 600
+        color: white
+        background: $primary-color
+        padding: 4px 0 7px 0
+  footer
+    position: absolute
+    left: 0
+    bottom: 5px
+    font-size: 13px
+    text-align: center
+    width: 100%
+    a
+      text-decoration: none
+      color: $cta-color
+      &:hover
+        background: $cta-color
+        color: white
+
+.login-container
+  position: absolute
+  left: 0
+  bottom: 58px
+  box-sizing: border-box
+  padding: 0 31px
+  font-size: 13px
+  line-height: 15px
+.login-button
+  font-size: 16px
+  width: 225px
+  padding: 15px 0
+  border-radius: 5px
+  color: $cta-color
+  fill: currentColor
+  text-decoration: none
+  display: block
+  border: 1px solid $cta-color
+  background: transparent
+  text-align: center
+  font-weight: 600
+  margin-top: 18px
+  svg
+    margin-right: 5px
+  & > *
+    vertical-align: middle
+  &:hover
+    background: $cta-color
+    color: white
+main
+  width: 100%
+  order: 1
+  display: block

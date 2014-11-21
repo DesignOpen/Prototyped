@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "open_sans";
+  src: url("fonts/opensans/OpenSans-Semibold-webfont.eot");
+  src: url("fonts/opensans/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans/OpenSans-Semibold-webfont.woff") format("woff"), url("fonts/opensans/OpenSans-Semibold-webfont.ttf") format("truetype"), url("fonts/opensans/OpenSans-Semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: "open_sans";
+  src: url("fonts/opensans/OpenSans-ExtraBold-webfont.eot");
+  src: url("fonts/opensans/OpenSans-ExtraBold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans/OpenSans-ExtraBold-webfont.woff") format("woff"), url("fonts/opensans/OpenSans-ExtraBold-webfont.ttf") format("truetype"), url("fonts/opensans/OpenSans-ExtraBold-webfont.svg#open_sansextrabold") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: "open_sans";
+  src: url("fonts/opensans/OpenSans-Light-webfont.eot");
+  src: url("fonts/opensans/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans/OpenSans-Light-webfont.woff") format("woff"), url("fonts/opensans/OpenSans-Light-webfont.ttf") format("truetype"), url("fonts/opensans/OpenSans-Light-webfont.svg#open_sanslight") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+html {
+  height: 100%; }
+
+body {
+  display: flex;
+  font-family: "open_sans";
+  color: #3D3D3D;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-weight: 200; }
+
+header.site {
+  order: 2;
+  flex-shrink: 0;
+  width: 300px;
+  background: #F2F2F2;
+  border-left: 1px solid #E6E6E6;
+  box-sizing: border-box;
+  padding: 40px 25px 0;
+  position: relative; }
+  header.site .description {
+    padding: 27px 12px 0;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 24px; }
+  header.site h1 {
+    text-transform: uppercase;
+    text-align: center; }
+    header.site h1 span {
+      display: inline-block;
+      width: 250px;
+      overflow: hidden; }
+      header.site h1 span:first-child {
+        font-size: 36px;
+        font-weight: 900; }
+      header.site h1 span:last-child {
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+        background: #3D3D3D;
+        padding: 4px 0 7px 0; }
+  header.site footer {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 13px;
+    text-align: center;
+    width: 100%; }
+    header.site footer a {
+      text-decoration: none;
+      color: #4183C4; }
+      header.site footer a:hover {
+        background: #4183C4;
+        color: white; }
+
+.login-container {
+  position: absolute;
+  left: 0;
+  bottom: 58px;
+  box-sizing: border-box;
+  padding: 0 31px;
+  font-size: 13px;
+  line-height: 15px; }
+
+.login-button {
+  font-size: 16px;
+  width: 225px;
+  padding: 15px 0;
+  border-radius: 5px;
+  color: #4183C4;
+  fill: currentColor;
+  text-decoration: none;
+  display: block;
+  border: 1px solid #4183C4;
+  background: transparent;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 18px; }
+  .login-button svg {
+    margin-right: 5px; }
+  .login-button > * {
+    vertical-align: middle; }
+  .login-button:hover {
+    background: #4183C4;
+    color: white; }
+
+main {
+  width: 100%;
+  order: 1;
+  display: block; }
