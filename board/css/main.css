@@ -20,23 +20,26 @@ html {
   height: 100%; }
 
 body {
-  display: flex;
   font-family: "open_sans";
   color: #3D3D3D;
   height: 100%;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  font-weight: 200; }
+  font-weight: 200;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 300px; }
 
 header.site {
-  order: 2;
-  flex-shrink: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
   width: 300px;
   background: #F2F2F2;
   border-left: 1px solid #E6E6E6;
   box-sizing: border-box;
-  padding: 40px 25px 0;
-  position: relative; }
+  padding: 40px 25px 0; }
   header.site .description {
     padding: 27px 12px 0;
     font-size: 20px;
@@ -107,3 +110,45 @@ main {
   width: 100%;
   order: 1;
   display: block; }
+
+.projects {
+  padding: 64px;
+  max-width: 620px;
+  position: relative;
+  margin: 0 auto; }
+  .projects header h3 {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 900;
+    border-bottom: 1px solid #808080;
+    padding-bottom: 11px; }
+
+.project-item {
+  height: 118px;
+  border-bottom: 1px solid rgba(77, 77, 77, 0.1);
+  position: relative;
+  box-sizing: border-box;
+  padding: 24px 0 0 90px; }
+  .project-item .icon {
+    position: absolute;
+    left: 0;
+    top: 18px; }
+    .project-item .icon rect, .project-item .icon path {
+      fill: currentColor; }
+  .project-item .name {
+    font-size: 48px;
+    font-weight: 900; }
+  .project-item .design-type {
+    opacity: 0.5;
+    font-size: 18px;
+    font-weight: 900;
+    position: relative;
+    left: 3px; }
+  .project-item .date {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: right;
+    color: #3D3D3D; }
