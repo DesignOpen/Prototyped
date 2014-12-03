@@ -34,16 +34,19 @@
         .month
           %header
             %h3 November
-          - @projects = [{:name => 'Sass', :design_type => 'Frontend', :post_date => Time.now, :color => 'C4558C'},
-          {:name => 'Bootstrap', :design_type => 'Branding', :post_date => Time.now, :color => '5A437F'},
-          {:name => 'Brackets', :design_type => 'User Experience', :post_date => Time.now, :color => '2D95E6'},
-          {:name => 'Mozilla', :design_type => 'Information Architecture', :post_date => Time.now, :color => 'E4872C'},
-          {:name => 'Rails', :design_type => 'Interaction', :post_date => Time.now, :color => 'B90E23'}]
+          - @projects = [{:name => 'Sass', :design_type => 'Frontend', :post_date => Time.now, :color => 'C4558C', :url => 'sass/sass'},
+          {:name => 'Bootstrap', :design_type => 'Branding', :post_date => Time.now, :color => '5A437F', :url => 'twbs/bootstrap'},
+          {:name => 'Brackets', :design_type => 'User Experience', :post_date => Time.now, :color => '2D95E6', :url => 'adobe/brackets'},
+          {:name => 'Mozilla', :design_type => 'Information Architecture', :post_date => Time.now, :color => 'E4872C', :url => 'mozilla/webmaker.org'},
+          {:name => 'Rails', :design_type => 'Interaction', :post_date => Time.now, :color => 'B90E23', :url => 'rails/rails'}]
           - @projects.each do |project|
             .project-item{:style => "color: ##{project[:color]};"}
-              %svg.icon{:width=>"80", :height=>"80"}
-                %defs
-                %rect{:fill=>"#C6538C", :width=>"80", :height=>"80"}
-              .design-type= project[:design_type]
-              %h2.name= project[:name]
+              %a{:href => "/#{project[:url]}"}
+                %svg.icon{:width=>"80", :height=>"80"}
+                  %defs
+                  %rect{:fill=>"#C6538C", :width=>"80", :height=>"80"}
+              .design-type
+                %a{:href => "/#{project[:url]}"}= project[:design_type]
+              %h2.name
+                %a{:href => "/#{project[:url]}"}= project[:name]
               .date= project[:post_date].strftime("%b %e")

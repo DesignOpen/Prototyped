@@ -13,28 +13,24 @@ body
   font-weight: 200
   box-sizing: border-box
   width: 100%
-  padding-right: 300px
 header.site
-  position: fixed
-  right: 0
-  top: 0
-  height: 100%
-  width: 300px
+  padding: 10px 10px
   background: #F2F2F2
-  border-left: 1px solid #E6E6E6
   box-sizing: border-box
-  padding: 40px 25px 0
+  border-bottom: 1px solid #E6E6E6
   .description
-    padding: 27px 12px 0
-    font-size: 20px
+    padding: 18px 0 0
+    font-size: 18px
     font-weight: 200
-    line-height: 24px
   h1
+    width: 250px
+    position: relative
+    margin: 0 auto
     text-transform: uppercase
     text-align: center
     span
       display: inline-block
-      width: 250px
+      width: 100%
       overflow: hidden
       &:first-child
         font-size: 36px
@@ -132,3 +128,23 @@ main
     font-size: 13px
     text-align: right
     color: $primary-color
+  a
+    color: inherit
+    text-decoration: none
+@media only screen and (min-width: 1024px)
+  body
+    padding-right: 300px
+  header.site
+    position: fixed
+    right: 0
+    top: 0
+    height: 100%
+    width: 300px
+    border-left: 1px solid #E6E6E6
+    border-bottom: none
+    box-sizing: border-box
+    padding: 40px 25px 0
+    .description
+      padding: 27px 12px 0
+      font-size: 20px
+      line-height: 24px

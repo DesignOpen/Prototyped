@@ -27,30 +27,26 @@ body {
   font-size: 16px;
   font-weight: 200;
   box-sizing: border-box;
-  width: 100%;
-  padding-right: 300px; }
+  width: 100%; }
 
 header.site {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 300px;
+  padding: 10px 10px;
   background: #F2F2F2;
-  border-left: 1px solid #E6E6E6;
   box-sizing: border-box;
-  padding: 40px 25px 0; }
+  border-bottom: 1px solid #E6E6E6; }
   header.site .description {
-    padding: 27px 12px 0;
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 24px; }
+    padding: 18px 0 0;
+    font-size: 18px;
+    font-weight: 200; }
   header.site h1 {
+    width: 250px;
+    position: relative;
+    margin: 0 auto;
     text-transform: uppercase;
     text-align: center; }
     header.site h1 span {
       display: inline-block;
-      width: 250px;
+      width: 100%;
       overflow: hidden; }
       header.site h1 span:first-child {
         font-size: 36px;
@@ -152,3 +148,25 @@ main {
     font-size: 13px;
     text-align: right;
     color: #3D3D3D; }
+  .project-item a {
+    color: inherit;
+    text-decoration: none; }
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding-right: 300px; }
+
+  header.site {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    border-left: 1px solid #E6E6E6;
+    border-bottom: none;
+    box-sizing: border-box;
+    padding: 40px 25px 0; }
+    header.site .description {
+      padding: 27px 12px 0;
+      font-size: 20px;
+      line-height: 24px; } }
