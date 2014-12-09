@@ -17,12 +17,15 @@
   font-weight: 200;
   font-style: normal; }
 html {
-  height: 100%; }
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 160px;
+  position: relative; }
 
 body {
   font-family: "open_sans";
   color: #3D3D3D;
-  height: 100%;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   font-weight: 200;
@@ -37,7 +40,8 @@ header.site {
   header.site .description {
     padding: 18px 0 0;
     font-size: 18px;
-    font-weight: 200; }
+    font-weight: 200;
+    text-align: center; }
   header.site h1 {
     width: 250px;
     position: relative;
@@ -57,26 +61,24 @@ header.site {
         color: white;
         background: #3D3D3D;
         padding: 4px 0 7px 0; }
-  header.site footer {
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    font-size: 13px;
-    text-align: center;
-    width: 100%; }
-    header.site footer a {
-      text-decoration: none;
-      color: #4183C4; }
-      header.site footer a:hover {
-        background: #4183C4;
-        color: white; }
+  header.site .design-open-link {
+    display: none; }
+
+.design-open-link {
+  font-size: 13px;
+  text-align: center;
+  width: 100%; }
+  .design-open-link a {
+    text-decoration: none;
+    color: #4183C4; }
+    .design-open-link a:hover {
+      background: #4183C4;
+      color: white; }
 
 .login-container {
-  position: absolute;
-  left: 0;
-  bottom: 58px;
+  display: none;
+  position: relative;
   box-sizing: border-box;
-  padding: 0 31px;
   font-size: 13px;
   line-height: 15px; }
 
@@ -93,7 +95,7 @@ header.site {
   background: transparent;
   text-align: center;
   font-weight: 600;
-  margin-top: 18px; }
+  margin: 18px 0; }
   .login-button svg {
     margin-right: 5px; }
   .login-button > * {
@@ -152,9 +154,24 @@ main {
     color: inherit;
     text-decoration: none; }
 
+footer.site {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #F2F2F2;
+  border-top: 1px solid #e6e6e6;
+  padding: 10px 0;
+  height: 150px; }
+  footer.site .login-container {
+    display: inline-block;
+    text-align: left; }
+
 @media only screen and (min-width: 1024px) {
   body {
-    padding-right: 300px; }
+    padding-right: 300px;
+    padding-bottom: 0; }
 
   header.site {
     position: fixed;
@@ -169,4 +186,25 @@ main {
     header.site .description {
       padding: 27px 12px 0;
       font-size: 20px;
-      line-height: 24px; } }
+      line-height: 24px;
+      text-align: left; }
+    header.site .design-open-link {
+      display: block; }
+    header.site .login-button {
+      margin: 18px 0 0; }
+
+  footer.site {
+    display: none; }
+
+  .login-container {
+    position: absolute;
+    left: 0;
+    bottom: 58px;
+    padding: 0 31px;
+    display: block; }
+
+  .design-open-link {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 5px; } }

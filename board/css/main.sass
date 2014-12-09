@@ -3,11 +3,14 @@ $primary-color: #3D3D3D
 $cta-color: #4183C4
 
 html
-  height: 100%
+  min-height: 100%
+  box-sizing: border-box
+  padding-bottom: 160px
+  position: relative
 body
   font-family: 'open_sans'
   color: $primary-color
-  height: 100%
+  min-height: 100%
   -webkit-font-smoothing: antialiased
   font-size: 16px
   font-weight: 200
@@ -22,6 +25,7 @@ header.site
     padding: 18px 0 0
     font-size: 18px
     font-weight: 200
+    text-align: center
   h1
     width: 250px
     position: relative
@@ -41,26 +45,22 @@ header.site
         color: white
         background: $primary-color
         padding: 4px 0 7px 0
-  footer
-    position: absolute
-    left: 0
-    bottom: 5px
-    font-size: 13px
-    text-align: center
-    width: 100%
-    a
-      text-decoration: none
-      color: $cta-color
-      &:hover
-        background: $cta-color
-        color: white
-
+  .design-open-link
+    display: none
+.design-open-link
+  font-size: 13px
+  text-align: center
+  width: 100%
+  a
+    text-decoration: none
+    color: $cta-color
+    &:hover
+      background: $cta-color
+      color: white
 .login-container
-  position: absolute
-  left: 0
-  bottom: 58px
+  display: none
+  position: relative
   box-sizing: border-box
-  padding: 0 31px
   font-size: 13px
   line-height: 15px
 .login-button
@@ -76,7 +76,7 @@ header.site
   background: transparent
   text-align: center
   font-weight: 600
-  margin-top: 18px
+  margin: 18px 0
   svg
     margin-right: 5px
   & > *
@@ -131,9 +131,23 @@ main
   a
     color: inherit
     text-decoration: none
+footer.site
+  display: block
+  position: absolute
+  bottom: 0
+  width: 100%
+  text-align: center
+  background: #F2F2F2
+  border-top: 1px solid #e6e6e6
+  padding: 10px 0
+  height: 150px
+  .login-container
+    display: inline-block
+    text-align: left
 @media only screen and (min-width: 1024px)
   body
     padding-right: 300px
+    padding-bottom: 0
   header.site
     position: fixed
     right: 0
@@ -148,3 +162,21 @@ main
       padding: 27px 12px 0
       font-size: 20px
       line-height: 24px
+      text-align: left
+    .design-open-link
+      display: block
+    .login-button
+      margin: 18px 0 0
+  footer.site
+    display: none
+  .login-container
+    position: absolute
+    left: 0
+    bottom: 58px
+    padding: 0 31px
+    display: block
+  .design-open-link
+    display: block
+    position: absolute
+    left: 0
+    bottom: 5px
