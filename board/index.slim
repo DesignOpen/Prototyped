@@ -34,21 +34,21 @@ html
         .month
           header
             h3 November
-          - @projects = [{:name => 'Sass', :design_type => 'Frontend', :post_date => Time.now, :color => 'C4558C', :url => '../project.html'},
-          {:name => 'Bootstrap', :design_type => 'Branding', :post_date => Time.now, :color => '5A437F', :url => '../project.html'},
-          {:name => 'Brackets', :design_type => 'User Experience', :post_date => Time.now, :color => '2D95E6', :url => '../project.html'},
-          {:name => 'Mozilla', :design_type => 'Information Architecture', :post_date => Time.now, :color => 'E4872C', :url => '../project.html'},
-          {:name => 'Rails', :design_type => 'Interaction', :post_date => Time.now, :color => 'B90E23', :url => '../project.html'}]
+          - @projects = [{:name => 'Sass', :design_type => 'Frontend', :post_date => Time.now, :color => 'C4558C', :url => 'project.html'},
+          {:name => 'Bootstrap', :design_type => 'Branding', :post_date => Time.now, :color => '5A437F', :url => 'project.html'},
+          {:name => 'Brackets', :design_type => 'User Experience', :post_date => Time.now, :color => '2D95E6', :url => 'project.html'},
+          {:name => 'Mozilla', :design_type => 'Information Architecture', :post_date => Time.now, :color => 'E4872C', :url => 'project.html'},
+          {:name => 'Rails', :design_type => 'Interaction', :post_date => Time.now, :color => 'B90E23', :url => 'project.html'}]
           - @projects.each do |project|
             .project-item[style = "color: ##{project[:color]};"]
-              a[href = "/#{project[:url]}"]
+              a[href = "#{project[:url]}"]
                 svg.icon[width="80" height="80"]
                   defs
                   rect[fill="#C6538C" width="80" height="80"]
               .design-type
-                a[href = "/#{project[:url]}"]= project[:design_type]
+                a[href = "#{project[:url]}"]= project[:design_type]
               h2.name
-                a[href = "/#{project[:url]}"]= project[:name]
+                a[href = "#{project[:url]}"]= project[:name]
               .date= project[:post_date].strftime("%b %e")
     footer.site
       .login-container
