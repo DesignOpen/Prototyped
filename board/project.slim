@@ -13,8 +13,9 @@ html
     header.site
       #logo
         h1
-          span Design Open
-          span Project Board
+          a(href="/")
+            span Design Open
+            span Project Board
       h3.description A collection of open source projects looking for design contributions.
       .login-container
         | Looking for design contributions?
@@ -42,6 +43,24 @@ html
             h2.name
               a[href = "/#{project[:url]}"]= project[:name]
             .date= project[:post_date].strftime("%b %e")
+        .project-details
+          .work-description
+            p Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.
+            p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            p Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.
+          dl
+            dt Description
+            dd This your first repo!
+            dt Post Author
+            dd John Smith
+            dt Last Commit
+            dd Yesterday
+            dt Organization
+            dd Sass
+            dt Forks Count
+            dd 9
+            dt Watchers
+            dd 8
     footer.site
       .login-container
         | Looking for design contributions?

@@ -2,6 +2,12 @@
 $primary-color: #3D3D3D
 $cta-color: #4183C4
 
+p
+  font-size: 18px
+  line-height: 20px
+  margin-bottom: 18px
+  font-weight: normal
+
 html
   min-height: 100%
   box-sizing: border-box
@@ -41,6 +47,7 @@ header.site
       &:first-child
         font-size: 36px
         font-weight: 900
+        color: $primary-color
       &:last-child
         font-size: 30px
         font-weight: 600
@@ -152,6 +159,15 @@ footer.site
   .login-container
     display: inline-block
     text-align: left
+.project-details
+  padding-top: 30px
+  display: flex
+  flex-direction: column
+  font-size: 14px
+  dt
+    font-weight: 600
+  dd
+    margin-bottom: 20px
 @media only screen and (min-width: 1024px)
   body
     padding-right: 300px
@@ -208,3 +224,11 @@ footer.site
       -ms-transform: scale(1)
       -webkit-transform: scale(1)
       transform: scale(1)
+  .project-details
+    flex-direction: row
+    .work-description
+      order: 2
+    dl
+      width: 210px
+      flex-shrink: 0
+      padding-right: 20px
