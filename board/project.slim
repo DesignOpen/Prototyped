@@ -14,7 +14,7 @@ html
     header.site
       #logo
         h1
-          a(href="/")
+          a(href="")
             span Design Open
             span Project Board
       h3.description A collection of open source projects looking for design contributions.
@@ -35,14 +35,11 @@ html
         - @projects = [{:name => 'Sass', :design_type => 'Frontend', :post_date => Time.now, :color => 'C4558C', :url => 'sass/sass'}]
         - @projects.each do |project|
           .project-item[style = "color: ##{project[:color]};"]
-            a[href = "/#{project[:url]}"]
-              svg.icon[width="80" height="80"]
-                defs
-                rect[fill="#C6538C" width="80" height="80"]
-            .design-type
-              a[href = "/#{project[:url]}"]= project[:design_type]
-            h2.name
-              a[href = "/#{project[:url]}"]= project[:name]
+            svg.icon[width="80" height="80"]
+              defs
+              rect[fill="#C6538C" width="80" height="80"]
+            .design-type= project[:design_type]
+            h2.name= project[:name]
             .date= project[:post_date].strftime("%b %e")
         .project-details
           .work-description
